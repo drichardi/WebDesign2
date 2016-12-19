@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title>Christmas MadLib from Jimmy Fallon</title>
+    </head>
+    <body>
+        <div class="row">
+            <h1 class=text-center>Christmas Mad Lib</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-center"></div>
+            <div class="col-sm-4 text-center">
+                <form id="madlib">
+                    <h4 class=text-center>Enter your answers below!</h4>
+                    <input id="dessert" type="text" placeholder="Type of dessert">
+                    <input id="sillyWord" type="text" placeholder="Silly word">
+                    <input id="wordForFather" type="text" placeholder="Another word for father">
+                    <input id="year" type="text" placeholder="A year">
+                    <input id="celebName" type="text" placeholder="Celebrity Name">
+                    <input id="typeOfTree" type="text" placeholder="Type of tree">
+                    <input id="adjective" type="text" placeholder="Adjective">
+                    <input id="petName" type="text" placeholder="Something you'd name a pet">
+                    <input id="bandName" type="text" placeholder="Name of a band">
+                    <input id="animal" type="text" placeholder="Plural form of an animal">
+                    <input id="verb" type="text" placeholder="Verb ending in -ing">
+                    <input id="number" type="text" placeholder="A number">
+                    <input id="measureOfTime" type="text" placeholder="A measurement of time (plural)">
+                    <input id="bodyPart" type="text" placeholder="A body part">
+                    <input id="beverage" type="text" placeholder="Type of Beverage">
+                    <input id="doctor" type="text"  placeholder="Type of doctor">
+                    <input id="noise" type="text" placeholder="One syllable noise">
+                    <input id="nounPlural" type="text" placeholder="Plural form of a noun">
+                    <input id="transportation" type="text" placeholder="Mode of transportation">
+                    <input id="holiday" type="text" placeholder="A holiday">
+                    <input id="submit" type="button" value="Start the Story!">
+                    </form>
+                </div>
+            <div class="col-sm-4 text-center"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <p id="showStory">Story Here</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        
+        <script>
+             function madLib() {
+                var elf = document.getElementById('dessert').value;
+                var sillyWord= document.getElementById('sillyWord').value;
+                var father = document.getElementById('wordForFather').value;
+                var year = document.getElementById('year').value;
+                var celebName = document.getElementById('celebName').value;
+                var typeOfTree = document.getElementById('typeOfTree').value;
+                var adjective = document.getElementById('adjective').value;
+                var petName = document.getElementById('petName').value;
+                var bandName = document.getElementById('bandName').value;
+                var animal = document.getElementById('animal').value;
+                var verb = document.getElementById('verb').value;
+                var number = document.getElementById('number').value;
+                var measureOfTime = document.getElementById('measureOfTime').value;
+                var bodyPart = document.getElementById('bodyPart').value;
+                var beverage = document.getElementById('beverage').value;
+                var doctor = document.getElementById('doctor').value;
+                var noise = document.getElementById('noise').value;
+                var nounPlural = document.getElementById('nounPlural').value;
+                var transportation = document.getElementById('transportation').value;
+                var holiday = document.getElementById('holiday').value;
+                 
+                
+                var story = ""; 
+                 
+                story = "<p>" + elf + 'says, "Hi Santa!</p>' +
+                    "<p>" + 'Santa replies, "Hello ' + elf +'!"' + "</p>" +
+                    "<p>" + "'You\'re looking at me like I\'m on the naughty list!' " + elf + " shouts." + "</p>" +
+                    "<p>" + "Well I was counting my toys and I noticed I was one " + sillyWord + " short. I believe you stole it!</p>" +
+                    "<p>" + "But " + father + "!, cries " + elf + ".</p>" +
+                    "<p>" + "I started making that toy in " + year + "! What will the little " + celebName + " think when they " +
+                    "wake up Christmas morning with nothing under the " + typeOfTree + ".</p>" +
+                    "<p>" + "I would never steal such a " + adjective + " toy!, " + elf + " tries to explain.</p>" +
+                    "<p>" + "Santa questions, 'Where were you the night before Christmas?'.</p>" +
+                    "<p>" + "I was with " + petName + ", we were listening to " + bandName + " album and making snow " + animal + "!, " + elf + " says.</p>" +
+                    "<p>" + "Hmmm.... then why did Rudolph see you " + verb + " up on the roof! " + number + " " + measureOfTime + 
+                    " before the toy was missing?, exclaims Santa.</p>" +
+                    "<p>" + "That's a coincidence, mumbles " + elf + "</p>" +
+                    "<p>" + "'The reason I work so hard is because I get to spread joy to millions of people and then sit by the fire " +"shaking my " + bodyPart + ", while eating cookies and drinking " + beverage + "', Santa explains.</p>" + 
+                    "<p>" + "'Fine... I stole the toy, but I only did it because I wanted to impress my " + doctor + ".', explains "+ elf + "</p>" +
+                    "<p>" + noise + " Santa gestures. 'Everytime there's a holiday miracle I sing my favorite " + holiday + " song, " +
+                    "jingle " + nounPlural + ".\n" + 
+                    "<blockquote>" + "'Jingle " + nounPlural + ", jingle " + nounPlural + ", jingle all the way. Oh what fun it is to ride in a " +
+                    "one horse open " + transportation + "!', sings Santa.</blockquote>" + "<h3>Merry Christmas!</h3>";
+                    
+                    document.getElementById("showStory").innerHTML = story;
+                };
+            document.getElementById("submit").onclick = function() {
+                madLib();
+            };
+      
+        </script>
+    </body>
+</html>
